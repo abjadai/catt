@@ -156,13 +156,9 @@ class TashkeelTokenizer:
             letters = [self.letters[i] for i in input_ids[j]]
             tashkeel = [self.tashkeel_list[i] for i in target_ids[j]]
 
-            assert len(letters) == len(tashkeel), '1111111'
-
             letters = list(filter(lambda x: x != '<BOS>' and x != '<EOS>' and x != '<PAD>', letters))
             tashkeel = self.filter_tashkeel(tashkeel)
             tashkeel = list(filter(lambda x: x != '<BOS>' and x != '<EOS>' and x != '<PAD>', tashkeel))
-
-            #assert len(letters) == len(tashkeel), (letters, tashkeel)
 
             # VERY IMPORTANT NOTE: zip takes min(len(letters), len(tashkeel)) and discard the reset of letters / tashkeels
             letter_n_tashkeel_pairs = list(zip(letters, tashkeel))
@@ -210,9 +206,7 @@ if __name__ == '__main__':
     from tqdm import tqdm
     tokenizer = TashkeelTokenizer()
 
-    txt_folder_path = 'arabic-text-diacritization/dataset/train'
-    #txt_folder_path = '/home/farisalasmary/Desktop/tmps/tashkeel/Tashkeela-arabic-diacritized-text-utf8-0.3/texts'
-
+    txt_folder_path = 'dataset/train'
     prepared_lines = []
     for filepath in utils.get_files(txt_folder_path, '*.txt'):
         print(f'Reading file: {filepath}')
