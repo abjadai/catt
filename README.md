@@ -3,6 +3,12 @@
 
 This is the official implementations of the paper [CATT: Character-based Arabic Tashkeel Transformer]().
 
+### ToDo
+- [x] inference script
+- [x] upload our pretrained models
+- [ ] training script
+- [ ] upload CATT dataset
+
 This work is licensed under a
 [Creative Commons Attribution-NonCommercial 4.0 International License][cc-by-nc].
 
