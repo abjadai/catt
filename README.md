@@ -3,12 +3,17 @@
 
 This is the official implementations of the paper [CATT: Character-based Arabic Tashkeel Transformer](https://arxiv.org/abs/2407.03236).
 
+## Resources
+- This code is mainly adapted from [this repo](https://github.com/hyunwoongko/transformer).
+- An [older version](https://github.com/MTG/ArabicTransliterator/blob/master/qalsadi/libqutrub/arabic_const.py) of some Arabic scripts that are available in [pyarabic](https://github.com/linuxscout/pyarabic/blob/master/pyarabic/araby_const.py) library were used as well.
+
 ### ToDo
 - [x] inference script
 - [x] upload our pretrained models
 - [x] upload CATT dataset
 - [x] upload DER scripts
 - [ ] training script
+
 
 This work is licensed under a
 [Creative Commons Attribution-NonCommercial 4.0 International License][cc-by-nc].
