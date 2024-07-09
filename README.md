@@ -1,7 +1,7 @@
 # CATT: Character-based Arabic Tashkeel Transformer
 [![CC BY-NC 4.0][cc-by-nc-shield]][cc-by-nc] <a href='https://arxiv.org/abs/2407.03236'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
 
-This is the official implementations of the paper [CATT: Character-based Arabic Tashkeel Transformer](https://arxiv.org/abs/2407.03236).
+This is the official implementation of the paper [CATT: Character-based Arabic Tashkeel Transformer](https://arxiv.org/abs/2407.03236).
 
 ## How to Run?
 You need first to download models. You can find them in the `Releases` section of this repo.\
