@@ -31,7 +31,7 @@ ED models are recommended for better accuracy of the predicted diacritics.
 - [x] upload our pretrained models
 - [x] upload CATT dataset
 - [x] upload DER scripts
-- [ ] training script
+- [x] training script
 
 
 This work is licensed under a
