@@ -22,6 +22,30 @@ python predict_eo.py
 EO models are recommended for faster inference.\
 ED models are recommended for better accuracy of the predicted diacritics.
 
+## How to Train?
+To start trainnig, you need to download the dataset from the `Releases` section of this repo.
+```bash
+wget https://github.com/abjadai/catt/releases/download/v2/dataset.zip
+unzip dataset.zip
+```
+Then, edit the script `train_catt.py` and adjest the default values:
+```python
+# Model's Configs
+model_type = 'ed' # 'eo' for Encoder-Only OR 'ed' for Encoder-Decoder
+dl_num_workers = 32
+batch_size = 32
+max_seq_len = 1024
+threshold = 0.6
+
+# Pretrained Char-Based BERT
+pretrained_mlm_pt = None # Use None if you want to initialize weights randomly OR the path to the char-based BERT
+#pretrained_mlm_pt = 'char_bert_model_pretrained.pt'
+```
+Finally, run the training script.
+```bash
+python train_catt.py
+```
+
 ## Resources
 - This code is mainly adapted from [this repo](https://github.com/hyunwoongko/transformer).
 - An [older version](https://github.com/MTG/ArabicTransliterator/blob/master/qalsadi/libqutrub/arabic_const.py) of some Arabic scripts that are available in [pyarabic](https://github.com/linuxscout/pyarabic/blob/master/pyarabic/araby_const.py) library were used as well.
