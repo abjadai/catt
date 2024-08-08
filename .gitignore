@@ -1,3 +1,12 @@
+# local files
+dataset/*
+!dataset/.gitkeep
+!dataset/train/sample.txt
+!dataset/val/sample.txt
+!dataset/test/sample.txt
+models/*
+!models/.gitkeep
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

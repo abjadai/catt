@@ -1,0 +1,14 @@
+model_type: encoder-decoder
+max_seq_len: 1024
+d_model: 512
+n_layers: 3
+n_heads: 16
+drop_prob: 0.1
+learnable_pos_emb: false
+batch_size: 32
+dl_num_workers: 32
+threshold: 0.6
+max_epochs: 300
+model_path: "models/best_ed_mlm_ns_epoch_178.pt"
+pretrained_mlm_pt: 
+device: 'cuda'
