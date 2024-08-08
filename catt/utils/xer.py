@@ -25,20 +25,26 @@ def cer(ref, hyp):
         ref (string): a space-separated ground truth string
         hyp (string): a space-separated hypothesis
     """
-    ref, hyp, = ref.replace(' ', '').strip(), hyp.replace(' ', '').strip()
+    (
+        ref,
+        hyp,
+    ) = (
+        ref.replace(" ", "").strip(),
+        hyp.replace(" ", "").strip(),
+    )
     info = edit_distance(ref, hyp)
-    distance = info['total']
+    distance = info["total"]
     ref_length = float(len(ref))
-    
+
     data = {
-                'insertions': info['ins'],
-                'deletions': info['del'],
-                'substitutions': info['sub'],
-                'distance': distance,
-                'ref_length': ref_length,
-                'Error Rate': (distance / ref_length) * 100
-           }
-    
+        "insertions": info["ins"],
+        "deletions": info["del"],
+        "substitutions": info["sub"],
+        "distance": distance,
+        "ref_length": ref_length,
+        "Error Rate": (distance / ref_length) * 100,
+    }
+
     return data
 
 
@@ -50,27 +56,26 @@ def wer(ref, hyp):
         ref (string): a space-separated ground truth string
         hyp (string): a space-separated hypothesis
     """
-    
+
     # build mapping of words to integers
     b = set(ref.split() + hyp.split())
     word2char = dict(zip(b, range(len(b))))
-    
+
     # map the words to a char array (Levenshtein packages only accepts strings)
     w1 = [chr(word2char[w]) for w in ref.split()]
     w2 = [chr(word2char[w]) for w in hyp.split()]
-    
-    info = edit_distance(''.join(w1), ''.join(w2))
-    distance = info['total']
-    ref_length = float(len(w1))
-    
-    data = {
-                'insertions': info['ins'],
-                'deletions': info['del'],
-                'substitutions': info['sub'],
-                'distance': distance,
-                'ref_length': ref_length,
-                'Error Rate': (distance / ref_length) * 100
-           }
-    
-    return data 
 
+    info = edit_distance("".join(w1), "".join(w2))
+    distance = info["total"]
+    ref_length = float(len(w1))
+
+    data = {
+        "insertions": info["ins"],
+        "deletions": info["del"],
+        "substitutions": info["sub"],
+        "distance": distance,
+        "ref_length": ref_length,
+        "Error Rate": (distance / ref_length) * 100,
+    }
+
+    return data
