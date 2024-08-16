@@ -1,5 +1,5 @@
 # CATT: Character-based Arabic Tashkeel Transformer
-[![CC BY-NC 4.0][cc-by-nc-shield]][cc-by-nc] <a href='https://arxiv.org/abs/2407.03236'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
+[![CC BY-NC 4.0][cc-by-nc-shield]][cc-by-nc] <a href='https://arxiv.org/abs/2407.03236'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a> [![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-sm.svg)](https://huggingface.co/spaces/MohamedRashad/arabic-auto-tashkeel)
 
 This is the official implementation of the paper [CATT: Character-based Arabic Tashkeel Transformer](https://arxiv.org/abs/2407.03236).
 
