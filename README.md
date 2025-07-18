@@ -22,6 +22,41 @@ python predict_eo.py
 EO models are recommended for faster inference.\
 ED models are recommended for better accuracy of the predicted diacritics.
 
+## Converting Models to ONNX
+
+### Export PyTorch Models
+
+To convert your trained PyTorch models to ONNX format, use the export script:
+
+```bash
+python export_to_onnx.py
+```
+
+This script will:
+- Load your trained PyTorch model checkpoints
+- Export separate ONNX models for encoder and decoder components
+- Validate the exported models for correctness
+- Save the ONNX models in the `onnx_models/` directory
+
+**Output files:**
+- `encoder.onnx` - The encoder component
+- `decoder.onnx` - The decoder component (or linear layer for encoder-only models)
+
+### Running ONNX Models
+
+To test and run inference with the exported ONNX models:
+
+```bash
+python run_onnx.py
+```
+
+This script will:
+- Load the exported ONNX models
+- Run inference using ONNX Runtime
+
+For more details on the export process, check the `export_to_onnx.py` script configuration.
+
+
 ## How to Train?
 To start trainnig, you need to download the dataset from the `Releases` section of this repo.
 ```bash
