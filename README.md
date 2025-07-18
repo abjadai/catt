@@ -1,5 +1,5 @@
 # CATT: Character-based Arabic Tashkeel Transformer
-[![CC BY-NC 4.0][cc-by-nc-shield]][cc-by-nc] <a href='https://arxiv.org/abs/2407.03236'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a> [![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-sm.svg)](https://huggingface.co/spaces/MohamedRashad/arabic-auto-tashkeel)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-sm.svg)](https://huggingface.co/spaces/MohamedRashad/arabic-auto-tashkeel)
 
 This is the official implementation of the paper [CATT: Character-based Arabic Tashkeel Transformer](https://arxiv.org/abs/2407.03236).
 
@@ -57,13 +57,7 @@ python train_catt.py
 - [x] upload DER scripts
 - [x] training script
 
-
-This work is licensed under a
-[Creative Commons Attribution-NonCommercial 4.0 International License][cc-by-nc].
-
-[![CC BY-NC 4.0][cc-by-nc-image]][cc-by-nc]
-
-[cc-by-nc]: https://creativecommons.org/licenses/by-nc/4.0/
-[cc-by-nc-image]: https://licensebuttons.net/l/by-nc/4.0/88x31.png
-[cc-by-nc-shield]: https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg
-
+## License Change: CC-BY-NC to Apache 2.0
+This repository has updated its license from Creative Commons Attribution-NonCommercial (CC-BY-NC) to Apache 2.0 License.
+This change removes commercial use restrictions and adopts an industry-standard open-source license, enabling broader adoption and collaboration.
+This transition supports the project's growth while maintaining our commitment to open-source principles.
