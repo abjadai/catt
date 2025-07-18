@@ -5,7 +5,7 @@ This is the official implementation of the paper [CATT: Character-based Arabic T
 
 ## How to Run?
 ### Run Using `catt-tashkeel` Package
-You can easily install CATT models as a packge using `pip` as follows:\
+You can easily install CATT models as a packge using `pip` as follows:
 ```bash
 pip install catt-tashkeel
 ```
