@@ -4,6 +4,28 @@
 This is the official implementation of the paper [CATT: Character-based Arabic Tashkeel Transformer](https://arxiv.org/abs/2407.03236).
 
 ## How to Run?
+### Run Using `catt-tashkeel` Package
+You can easily install CATT models as a packge using `pip` as follows:\
+```bash
+pip install catt-tashkeel
+```
+Then, you can import the classes and use them directly. Here is an example:
+```python
+from catt_tashkeel import CATTEncoderDecoder, CATTEncoderOnly
+
+eo = CATTEncoderOnly()
+ed = CATTEncoderDecoder()
+
+text = 'وقالت مجلة نيوزويك الأمريكية التحديث الجديد ل إنستجرام يمكن أن يساهم في إيقاف وكشف الحسابات المزورة بسهولة شديدة'
+
+print(eo.do_tashkeel_batch([text], verbose=False))
+print(ed.do_tashkeel_batch([text], verbose=False))
+print(ed.do_tashkeel(text, verbose=False))
+print(eo.do_tashkeel(text, verbose=False))
+
+```
+
+### Run Using PyTorch
 You need first to download models. You can find them in the `Releases` section of this repo.\
 The best checkpoint for Encoder-Decoder (ED) model is `best_ed_mlm_ns_epoch_178.pt`.\
 For the Encoder-Only (EO) model, the best checkpoint is `best_eo_mlm_ns_epoch_193.pt`.\
